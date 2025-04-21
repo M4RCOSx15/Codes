@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class AttDois {
+    public static void main(String[] args) {
+        Scanner leia = new Scanner(System.in);
+        int test;
+        int cand;
+        int cont [] = new int[6];
+        do {
+             System.out.println(" 1-Candidato Jair Rodrigues \n 2-Candidato Carlos Luz \n 3-Candidato Neves Rocha \n 4-Nulo \n 5-Branco \n Digite o numero do seu candidato:");
+             cand = leia.nextInt();
+          
+             switch (cand) {
+                case 1:
+                    cont[0] = cont[0]+1;
+                    break;
+             
+                case 2:
+                    cont[1] = cont[1]+1;
+                    break;
+                case 3: 
+                cont[2] = cont[2]+1;
+                break;
+                case 4 :
+                cont[3] = cont[3]+1; 
+                break;
+                case 5:
+                cont[4] = cont[4]+1; 
+                break;
+                case 6:
+                System.out.println("1-Candidato Jair Rodrigues: "+cont[0]+ " \n 2-Candidato Carlos Luz: "+cont[1]+"\n 3-Candidato Neves Rocha: "+cont[2]+" \n 4-Nulo: "+cont[3]+" \n5-Branco: "+cont[4]);
+                break;
+               
+                
+             } System.out.println("Voce deseja continuar ? \n Digite 1 para sim e 0 para não :");
+             test = leia.nextInt();
+            } while (test!= 0);
+       leia.close();
+    }
+}
