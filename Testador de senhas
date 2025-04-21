@@ -1,0 +1,18 @@
+package listadois;
+import java.util.Scanner;
+public class AttUm {
+    public static void main(String[]args){
+    Scanner leia = new Scanner(System.in);
+    int senha;
+    do{
+     System.out.println("Digite uma senha ");
+     senha = leia.nextInt();
+     if(senha != 1234){
+        System.out.println("Senha incorreta, faça novamente");
+     }else{
+        System.out.println("Senha correta !");
+     }
+    }while(senha!=1234);
+   leia.close();
+    }
+}
