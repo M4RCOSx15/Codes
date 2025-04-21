@@ -1,0 +1,39 @@
+package listadois;
+
+import java.util.Scanner;
+
+public class AttTres {
+    public static void main(String[] args) {
+        Scanner leia = new Scanner(System.in);
+        String cont;
+        int din =1000;
+        int saque,depo;
+       System.out.println("(a) consulta saldo (b) saque  (c) depósito  (d) sair. ");
+       cont = leia.nextLine(); 
+       while (!cont.equals("d")){
+             
+          if(cont.equals("a") ){
+                    System.out.println("Seu saldo é: "+din);
+          }
+           if(cont.equals("b")){     System.out.println("Você deseja sacar quantos? ");
+                saque = leia.nextInt();
+                leia.nextLine();
+                din = din - saque;
+        }
+           if(cont.equals("c")){
+                System.out.println("Deseja depositar quantos ?");
+                depo = leia.nextInt();
+                leia.nextLine();
+                din = din+depo; 
+               
+           }
+                
+           System.out.println("(a) consulta saldo (b) saque  (c) depósito  (d) sair. ");
+            cont = leia.nextLine();
+            }
+           
+             System.out.println("Seu saldo final é : "+din);
+            leia.close();
+        } 
+       
+    }
